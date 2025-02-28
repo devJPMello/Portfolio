@@ -12,6 +12,7 @@
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
   --white: #ffff;
+  --blue: #121826;
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
@@ -53,7 +54,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   color: var(--white);
-  background-color: var(--second-color);
+  background-color: var(--blue);
 }
 
 h1,
@@ -119,7 +120,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--second-color);
+  background-color: var(--blue);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -393,7 +394,7 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
+  background-color: var(--blue);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
