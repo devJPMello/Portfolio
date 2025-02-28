@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Portfólio</title>
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Portfólio </a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Sobre</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Projetos</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title"><span class="home__title-color">João Pedro Mendes de Mello</span><br>
+                    Desenvolvedor
+                    <br>Front-End
+                </h1>
+                <a href="assets/pdf/Curriculo João Pedro.pdf" class="button" target="_blank">Download CV</a>
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/joao-pedro-mendes-de-mello/" class="home-social-icon"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+
+                    <a href="https://github.com/devJPMello" class="home-social-icon" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">Sobre mim</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/sobre.jpg" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">Olá, </h2>
+                    <p class="about__text">Sou um entusiasta da tecnologia e um desenvolvedor
+                        apaixonado por transformar ideias em soluções funcionais e eficientes.
+                        Com experiência em desenvolvimento de software e suporte técnico,
+                        estou sempre buscando aprimorar minhas habilidades e explorar novas tecnologias.
+                        Meu objetivo é criar aplicações inovadoras que gerem impacto e facilitem a vida das pessoas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== WORK =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title">Projetos</h2>
+            <div class="work__container bd-grid">
+                <a href="https://github.com/devJPMello/App-Pomodoro" class="work__img" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="assets/img/AppPomodoro.jpg" alt="App Pomodoro">
+                    <span class="work__title">App Pomodoro</span>
+                </a>
+
+                <a href="https://github.com/devJPMello/EasyCar-Mobile" class="work__img" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="assets/img/EasyCar.jpg" alt="EasyCar">
+                    <span class="work__title">EasyCar</span>
+                </a>
+
+                <a href="https://github.com/devJPMello/Pokedex" class="work__img" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="assets/img/Pokedex.jpg" alt="Pokedex">
+                    <span class="work__title">Pokedex</span>
+                </a>
+
+                <a href="https://github.com/devJPMello/Habits" class="work__img" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="assets/img/Habits.jpg" alt="Habits">
+                    <span class="work__title">Habits</span>
+                </a>
+
+                <a href="https://github.com/devJPMello/fullstackweek-donalds" class="work__img" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="assets/img/FWSDonalds.jpg" alt="FSW Donalds">
+                    <span class="work__title">FSW Donalds</span>
+                </a>
+
+                <a href="https://github.com/devJPMello/Lista-de-tarefa" class="work__img" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="assets/img/ListaTarefa.jpg" alt="Lista de tarefas">
+                    <span class="work__title">Lista de tarefas</span>
+                </a>
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contato</h2>
+
+            <div class="contact__container bd-grid">
+                <form onsubmit="sendToWhatsApp(event)" class="contact__form">
+                    <input type="text" id="name" placeholder="Nome" class="contact__input" required>
+                    <input type="email" id="email" placeholder="Email" class="contact__input" required>
+                    <textarea id="message" placeholder="Sua mensagem..." cols="30" rows="10" class="contact__input"
+                        required></textarea>
+
+                    <button type="submit" class="contact__button button">Enviar via WhatsApp</button>
+                </form>
+            </div>
+        </section>
+
+        <script>
+            function sendToWhatsApp(event) {
+                event.preventDefault(); // Impede o envio tradicional do formulário
+
+                let phoneNumber = "5566984239133"; // Substitua pelo seu número
+                let name = document.getElementById("name").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let message = document.getElementById("message").value.trim();
+
+                // Criando a mensagem formatada
+                let whatsappMessage =
+                    ` *Nome:* ${name}\n` +
+                    `*Email:* ${email}\n\n` +
+                    `*Mensagem:*\n${message}\n\n`
+
+
+                // Criando o link para o WhatsApp
+                let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+                // Redirecionando para o WhatsApp
+                window.open(url, "_blank");
+            }
+        </script>
+
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <div class="footer__social">
+            <a href="https://www.instagram.com/_pepem2/" class="footer__icon" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://x.com/Pepemello_13" class="footer__icon" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-twitter'></i>
+            </a>
+            <a href="https://www.linkedin.com/in/joao-pedro-mendes-de-mello/" class="footer__icon" target="_blank"
+                rel="noopener noreferrer">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/devJPMello" class="footer__icon" target="_blank" rel="noopener noreferrer">
+                <i class='bx bxl-github'></i>
+            </a>
+            <a href="assets/pdf/Curriculo João Pedro.pdf" class="footer__icon" target="_blank" download
+                rel="noopener noreferrer">
+                <i class='bx bx-download'></i>
+            </a>
+        </div>
+
+        <p class="footer__copy">&#169; Dev.JPMello</p>
+    </footer>
+
+
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
