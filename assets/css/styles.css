@@ -287,7 +287,7 @@ img {
 
 .work__img img {
   width: 100%;
-  height: center;
+  height: 100%;
   object-fit: cover;
   border-radius: 10px;
   transition: opacity 0.3s ease-in-out;
