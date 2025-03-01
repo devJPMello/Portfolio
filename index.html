@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -19,15 +22,16 @@
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
-                <a href="#" class="nav__logo">Portfólio </a>
+                <a href="#" class="nav__logo text-decoration-none">Portfólio </a>
             </div>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Inicio</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">Sobre</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Projetos</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contato</a></li>
+                    <li class="nav__item"><a href="#home " class="nav__link active-link text-decoration-none">Inicio</a>
+                    </li>
+                    <li class="nav__item"><a href="#about" class="nav__link text-decoration-none">Sobre</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link text-decoration-none">Projetos</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link text-decoration-none">Contato</a></li>
                 </ul>
             </div>
 
@@ -45,7 +49,8 @@
                     Desenvolvedor
                     <br>Front-End
                 </h1>
-                <a href="assets/pdf/Curriculo João Pedro.pdf" class="button" target="_blank">Download CV</a>
+                <a href="assets/pdf/Curriculo João Pedro.pdf" class="button text-decoration-none"
+                    target="_blank">Download CV</a>
                 <div class="home__social">
                     <a href="https://www.linkedin.com/in/joao-pedro-mendes-de-mello/" class="home-social-icon"
                         target="_blank" rel="noopener noreferrer">
@@ -65,64 +70,119 @@
         <!--===== ABOUT =====-->
         <section class="about section " id="about">
             <h2 class="section-title">Sobre mim</h2>
-
             <div class="about__container bd-grid">
                 <div class="about__img">
                     <img src="assets/img/sobre.png" alt="">
                 </div>
-
                 <div>
-                    <h2 class="about__subtitle">Olá, </h2>
-                    <p class="about__text">Sou um entusiasta da tecnologia e um desenvolvedor
-                        apaixonado por transformar ideias em soluções funcionais e eficientes.
-                        Com experiência em desenvolvimento de software,
-                        estou sempre buscando aprimorar minhas habilidades e explorar novas tecnologias.
-                        Meu objetivo é criar aplicações inovadoras que gerem impacto e facilitem a vida das pessoas.</p>
+                    <h4 class="about__subtitle">Olá, </h4>
+                    <p class="about__text">Sou um entusiasta da tecnologia e um desenvolvedor apaixonado por transformar
+                        ideias em soluções funcionais e eficientes. Com experiência em TypeScript, React.js, React
+                        Native e Next.js, estou sempre em busca de aprimorar minhas habilidades e explorar novas
+                        tecnologias. Meu objetivo é criar aplicações inovadoras que gerem impacto, proporcionando
+                        experiências dinâmicas, escaláveis e acessíveis para facilitar a vida das pessoas. </p>
                 </div>
             </div>
         </section>
 
         <!--===== WORK =====-->
-        <section class="work section" id="work">
+        <section class="work section container" id="work">
             <h2 class="section-title">Projetos</h2>
-            <div class="work__container bd-grid">
-                <a href="https://github.com/devJPMello/App-Pomodoro" class="work__img" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="assets/img/AppPomodoro.jpg" alt="App Pomodoro">
-                    <span class="work__title">App Pomodoro</span>
-                </a>
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Primeira Página do Carrossel -->
+                    <div class="carousel-item active">
+                        <div class="work__carousel">
+                            <a href="https://github.com/devJPMello/App-Pomodoro" class="work__img" target="_blank">
+                                <img src="assets/img/AppPomodoroTela.png" alt="Tela do App Pomodoro">
+                                <div class="work__title">App Pomodoro</div>
+                            </a>
+                            <a href="https://github.com/devJPMello/ListaTarefas" class="work__img" target="_blank">
+                                <img src="assets/img/ListadeTarefas.png" alt="Interface da Lista de Tarefas">
+                                <div class="work__title">Lista de Tarefas</div>
+                            </a>
+                            <a href="https://github.com/devJPMello/FSWDonalds" class="work__img" target="_blank">
+                                <img src="assets/img/FSWDonalds.png" alt="FSWDonalds - Fast Food Digital">
+                                <div class="work__title">FSWDonalds</div>
+                            </a>
+                        </div>
+                    </div>
 
-                <a href="https://github.com/devJPMello/EasyCar-Mobile" class="work__img" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="assets/img/EasyCar.jpg" alt="EasyCar">
-                    <span class="work__title">EasyCar</span>
-                </a>
-
-                <a href="https://github.com/devJPMello/Pokedex" class="work__img" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="assets/img/Pokedex.jpg" alt="Pokedex">
-                    <span class="work__title">Pokedex</span>
-                </a>
-
-                <a href="https://github.com/devJPMello/Habits" class="work__img" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="assets/img/Habits.jpg" alt="Habits">
-                    <span class="work__title">Habits</span>
-                </a>
-
-                <a href="https://github.com/devJPMello/fullstackweek-donalds" class="work__img" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="assets/img/FWSDonalds.jpg" alt="FSW Donalds">
-                    <span class="work__title">FSW Donalds</span>
-                </a>
-
-                <a href="https://github.com/devJPMello/Lista-de-tarefa" class="work__img" target="_blank"
-                    rel="noopener noreferrer">
-                    <img src="assets/img/ListaTarefa.jpg" alt="Lista de tarefas">
-                    <span class="work__title">Lista de tarefas</span>
-                </a>
+                    <!-- Segunda Página do Carrossel -->
+                    <div class="carousel-item active">
+                        <div class="work__carousel">
+                            <a href="https://github.com/devJPMello/EasyCar" class="work__img" target="_blank">
+                                <img src="assets/img/EasyCar.jpg" alt="EasyCar - Aplicativo de Transporte">
+                                <div class="work__title">EasyCar</div>
+                            </a>
+                            <a href="https://github.com/devJPMello/Habits" class="work__img" target="_blank">
+                                <img src="assets/img/Habits.png" alt="Habits - Aplicativo de Hábitos">
+                                <div class="work__title">Habits</div>
+                            </a>
+                            <a href="https://github.com/devJPMello/Pokedex" class="work__img" target="_blank">
+                                <img src="assets/img/Pokemon-pkx.png" alt="Pokedex - Catálogo de Pokémon">
+                                <div class="work__title">Pokedex</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="carousel-dots">
+                <button role="button" class="dot " data-bs-target="#carouselExample" data-bs-slide-to="0"></button>
+                <button role="button" class="dot " data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const carousel = document.querySelector("#carouselExample");
+                    const dots = document.querySelectorAll(".dot");
+                    let startX = 0;
+                    let endX = 0;
+
+                    carousel.addEventListener("slid.bs.carousel", (event) => {
+                        const activeIndex = event.to; // Obtém o índice do slide ativo
+
+                        dots.forEach((dot, index) => {
+                            if (index === activeIndex) {
+                                dot.classList.add("active");
+                            } else {
+                                dot.classList.remove("active");
+                            }
+                        });
+                    });
+
+                    carousel.addEventListener("touchstart", (e) => {
+                        startX = e.touches[0].clientX;
+                    });
+
+                    carousel.addEventListener("touchend", (e) => {
+                        endX = e.changedTouches[0].clientX;
+                        handleSwipe();
+                    });
+
+                    carousel.addEventListener("mousedown", (e) => {
+                        startX = e.clientX;
+                        e.preventDefault();
+                    });
+
+                    carousel.addEventListener("mouseup", (e) => {
+                        endX = e.clientX;
+                        handleSwipe();
+                    });
+
+                    function handleSwipe() {
+                        const threshold = 50; // Distância mínima para considerar um swipe
+                        if (startX - endX > threshold) {
+                            bootstrap.Carousel.getInstance(carousel).next();
+                        } else if (endX - startX > threshold) {
+                            bootstrap.Carousel.getInstance(carousel).prev();
+                        }
+                    }
+                });
+            </script>
         </section>
+
 
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
@@ -169,18 +229,20 @@
     <!--===== FOOTER =====-->
     <footer class="footer">
         <div class="footer__social">
-            <a href="https://www.instagram.com/_pepem2/" class="footer__icon" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/_pepem2/" class="footer__icon text-decoration-none" target="_blank"
+                rel="noopener noreferrer">
                 <i class='bx bxl-instagram'></i>
             </a>
-            <a href="https://www.linkedin.com/in/joao-pedro-mendes-de-mello/" class="footer__icon" target="_blank"
-                rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/joao-pedro-mendes-de-mello/" class="footer__icon text-decoration-none"
+                target="_blank" rel="noopener noreferrer">
                 <i class='bx bxl-linkedin'></i>
             </a>
-            <a href="https://github.com/devJPMello" class="footer__icon" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/devJPMello" class="footer__icon text-decoration-none" target="_blank"
+                rel="noopener noreferrer">
                 <i class='bx bxl-github'></i>
             </a>
-            <a href="assets/pdf/Curriculo João Pedro.pdf" class="footer__icon" target="_blank" download
-                rel="noopener noreferrer">
+            <a href="assets/pdf/Curriculo João Pedro.pdf" class="footer__icon text-decoration-none" target="_blank"
+                download rel="noopener noreferrer">
                 <i class='bx bx-download'></i>
             </a>
         </div>
@@ -195,6 +257,12 @@
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
