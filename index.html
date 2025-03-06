@@ -22,24 +22,44 @@
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
-                <a href="#" class="nav__logo text-decoration-none">Portfólio </a>
+                <a href="#" class="nav__logo text-decoration-none">Portfólio</a>
             </div>
-
+    
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home " class="nav__link active-link text-decoration-none">Inicio</a>
-                    </li>
+                    <li class="nav__item"><a href="#home" class="nav__link active-link text-decoration-none">Início</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link text-decoration-none">Sobre</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link text-decoration-none">Projetos</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link text-decoration-none">Contato</a></li>
                 </ul>
             </div>
-
+    
+            <!-- Ícone do menu hamburguer -->
             <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
+                <i class="bx bx-menu"></i>
             </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const toggle = document.getElementById("nav-toggle");
+                    const menu = document.getElementById("nav-menu");
+                    const links = document.querySelectorAll(".nav__link"); 
+                
+                    toggle.addEventListener("click", function () {
+                        menu.classList.toggle("active");
+                    });
+                
+ 
+                    links.forEach(link => {
+                        link.addEventListener("click", function () {
+                            menu.classList.remove("active"); 
+                        });
+                    });
+                });
+                </script>
+                
         </nav>
     </header>
+    
 
     <main class="l-main">
         <!--===== HOME =====-->
@@ -75,7 +95,7 @@
                     <img src="assets/img/sobre.png" alt="">
                 </div>
                 <div>
-                    <h4 class="about__subtitle">Olá, </h4>
+                    <h4 class="about__subtitle"><br>Olá, </h4>
                     <p class="about__text">Sou um entusiasta da tecnologia e um desenvolvedor apaixonado por transformar
                         ideias em soluções funcionais e eficientes. Com experiência em TypeScript, React.js, React
                         Native e Next.js, estou sempre em busca de aprimorar minhas habilidades e explorar novas

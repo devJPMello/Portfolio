@@ -60,7 +60,6 @@ body {
 h2 {
   font-weight: bold !important;
   font-size: 3.5rem !important;
-  /* Ajuste conforme necessário */
   margin-bottom: 0.8rem !important;
 }
 
@@ -141,31 +140,51 @@ img {
   font-weight: var(--font-semi);
 }
 
+/* 🔹 Estilo do menu hamburguer */
+.nav__toggle {
+  display: none;
+  color: var(--white);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* 🔹 Esconde o menu em telas menores e define sua posição */
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
-    top: var(--header-height);
+    top: 0;
     right: -100%;
     width: 80%;
-    height: 100%;
+    height: 100vh;
     padding: 2rem;
     background-color: var(--second-color);
-    transition: 0.5s;
+    transition: right 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav__item {
+    margin-bottom: var(--mb-4);
+    color: var(--white);
+  }
+
+  .nav__toggle {
+    display: block; /* Exibe o ícone hamburguer */
+  }
+
+  /* Quando o menu está ativo */
+  .nav__menu.active {
+    right: 0;
   }
 }
 
-.nav__item {
-  margin-bottom: var(--mb-4);
-  color: var(--white);
-}
-
+/* 🔹 Efeito de sublinhado ao passar o mouse */
 .nav__link {
   position: relative;
   color: var(--white);
-}
-
-.nav__link:hover {
-  position: relative;
 }
 
 .nav__link:hover::after {
@@ -178,17 +197,7 @@ img {
   background-color: var(--first-color);
 }
 
-.nav__logo {
-  color: var(--white);
-}
-
-.nav__toggle {
-  color: var(--second-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/*Active menu*/
+/* 🔹 Destaque do link ativo */
 .active-link::after {
   position: absolute;
   content: "";
@@ -220,12 +229,10 @@ img {
 }
 
 .home__title {
-  font-size: 3.5rem;
-  /* Deixa o nome grande */
+  font-size: clamp(1.8rem, 5vw, 3.5rem); /* Se adapta ao tamanho da tela */
   font-weight: bold;
   text-align: center;
-  color: var(--white) !important;
-  /* Mantém branco */
+  line-height: 1.2; /* Mantém o espaçamento equilibrado */
 }
 
 .home__title-color {
@@ -266,16 +273,15 @@ img {
 .work__carousel {
   display: flex;
   justify-content: center;
-  align-items: center; /* Garante altura uniforme */
+  align-items: center; 
   gap: 20px;
   padding: 20px;
-  overflow: hidden; /* Evita que os itens vazem para fora do container */
+  overflow: hidden; 
   width: 100%;
 }
 
-/* Se os cards dentro do carrossel tiverem tamanhos variáveis */
 .work__carousel > * {
-  flex: 0 0 auto; /* Impede que os elementos cresçam ou encolham inesperadamente */
+  flex: 0 0 auto; 
 }
 
 
@@ -341,7 +347,7 @@ img {
   width: 100%;
   left: 0;
   top: 0;
-  transform: translateX(100%); /* Sempre inicia fora da tela à direita */
+  transform: translateX(100%);
   transition: transform 0.5s ease-out, opacity 0.3s ease-out;
 }
 
@@ -351,15 +357,13 @@ img {
   transform: translateX(0) !important;
 }
 
-/* Corrigir direção da transição ao voltar */
 .carousel-item-prev {
-  transform: translateX(-100%) !important; /* Sai para a esquerda */
+  transform: translateX(-100%) !important; 
 }
 
 .carousel-item-next {
-  transform: translateX(100%) !important; /* Entra da direita */
+  transform: translateX(100%) !important; 
 }
-
 
 .carousel-dots {
   display: flex;
@@ -384,9 +388,8 @@ img {
   background: rgba(255, 255, 255, 0.9);
 }
 
-
 .dot.active {
-  width: 50px;  /* Quando ativo, a barrinha fica maior */
+  width: 50px;  
   height: 8px;
   background: #ffffff;
 }
@@ -502,9 +505,23 @@ img {
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
   .home {
-    row-gap: 2rem;
+    padding: 4rem 0 2rem;
+  }
+
+  .home__title {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  .home__social-icon {
+    font-size: 1.5rem;
   }
 }
+
 
 @media screen and (min-width: 576px) {
   .home {
@@ -605,6 +622,7 @@ img {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }
+  
 }
 
 @media screen and (min-width: 992px) {
