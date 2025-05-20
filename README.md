@@ -1,11 +1,15 @@
-# Portfolio Responsive Complete
-### Portfolio Responsive Complete
+# Portfolio João Pedro Mendes de Mello
+### Portfolio João Pedro Mendes de Mello
 
-- Responsive Personal Portfolio Website HTML CSS & JavaScript.
-- Contains animations when scrolling.
-- Smooth scrolling in each section.
-- Developed first with the Mobile First methodology, then for desktop.
-- Compatible with all mobile devices and with a beautiful and pleasant user interface.
+-Portfólio em HTML, CSS e JavaScript.
+
+-Contém animações ao rolar a página.
+
+-Rolagem suave entre as seções.
+
+-Desenvolvido primeiramente com a metodologia Mobile First, depois adaptado para desktop.
+
+-Compatível com todos os dispositivos móveis e com uma interface bonita e agradável.
 
 
 
