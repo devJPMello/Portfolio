@@ -24,16 +24,17 @@
             <div>
                 <a href="#" class="nav__logo text-decoration-none">Portfólio</a>
             </div>
-    
+
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link text-decoration-none">Início</a></li>
+                    <li class="nav__item"><a href="#home" class="nav__link active-link text-decoration-none">Início</a>
+                    </li>
                     <li class="nav__item"><a href="#about" class="nav__link text-decoration-none">Sobre</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link text-decoration-none">Projetos</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link text-decoration-none">Contato</a></li>
                 </ul>
             </div>
-    
+
             <!-- Ícone do menu hamburguer -->
             <div class="nav__toggle" id="nav-toggle">
                 <i class="bx bx-menu"></i>
@@ -42,24 +43,24 @@
                 document.addEventListener("DOMContentLoaded", function () {
                     const toggle = document.getElementById("nav-toggle");
                     const menu = document.getElementById("nav-menu");
-                    const links = document.querySelectorAll(".nav__link"); 
-                
+                    const links = document.querySelectorAll(".nav__link");
+
                     toggle.addEventListener("click", function () {
                         menu.classList.toggle("active");
                     });
-                
- 
+
+
                     links.forEach(link => {
                         link.addEventListener("click", function () {
-                            menu.classList.remove("active"); 
+                            menu.classList.remove("active");
                         });
                     });
                 });
-                </script>
-                
+            </script>
+
         </nav>
     </header>
-    
+
 
     <main class="l-main">
         <!--===== HOME =====-->
@@ -121,9 +122,9 @@
                                 <img src="assets/img/SaborExpress.png" alt="Sabor Express - Aplicativo de comida">
                                 <div class="work__title">Sabor Express</div>
                             </a>
-                            <a href="https://app-habits-dev.vercel.app/" class="work__img" target="_blank">
-                                <img src="assets/img/Habits.png" alt="Habits - Aplicativo de Hábitos">
-                                <div class="work__title">Habits</div>
+                            <a href="https://gerador-senhas-alpha.vercel.app/" class="work__img" target="_blank">
+                                <img src="assets/img/GeradorSenhas.png" alt="Gerador de senhas - App para gerar senhas aleatorias">
+                                <div class="work__title">Gerador de senhas</div>
                             </a>
                         </div>
                     </div>
@@ -149,17 +150,18 @@
                     <!-- Terceira Página do Carrossel -->
                     <div class="carousel-item ">
                         <div class="work__carousel ">
-                        <a href="https://fsw-donalds-app.vercel.app/fsw-donalds" class="work__img" target="_blank">
-                            <img src="assets/img/FSWDonald.png" alt="FSWDonalds - Fast Food Digital">
-                            <div class="work__title">FSWDonalds</div>
-                        </a>
+                            <a href="https://fsw-donalds-app.vercel.app/fsw-donalds" class="work__img" target="_blank">
+                                <img src="assets/img/FSWDonald.png" alt="FSWDonalds - Fast Food Digital">
+                                <div class="work__title">FSWDonalds</div>
+                            </a>
                             <a href="https://controle-de-estoque-react.vercel.app/" class="work__img" target="_blank ">
                                 <img src="assets/img/Estoque.png" alt="BananaStock - APP de controle de estoque">
                                 <div class="work__title">BananaStock</div>
                             </a>
-                            <a href="https://github.com/devJPMello/TrainUp" class="work__img" target="_blank">
-                                <img src="assets/img/TrainUp.png" alt="TrainUp - App para controle de treino na academia">
-                                <div class="work__title">TrainUp</div>
+                            <a href="https://git-hub-profile-pink.vercel.app/" class="work__img" target="_blank">
+                                <img src="assets/img/BlogGit.png"
+                                    alt="GitHub Profile - App para busca de usuários">
+                                <div class="work__title">GitHub Profile</div>
                             </a>
                         </div>
                     </div>
@@ -225,6 +227,36 @@
                 });
 
             </script>
+        </section>
+
+
+        <section class="work section container" id="work">
+            <h2 class="section-title">Contribuições</h2>
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Primeira Página do Carrossel -->
+                    <div class="carousel-item active">
+                        <div class="work__carousel">
+                            <a href="https://auto.portosiao.com.br/" class="work__img" target="_blank">
+                                <img src="assets/img/Automoveis.png" alt="Automóveis - Consorcio Porto Sião">
+                                <div class="work__title">Automóveis Porto Sião</div>
+                            </a>
+                            <a href="https://pesados.portosiao.com.br/" class="work__img" target="_blank">
+                                <img src="assets/img/Pesados.png" alt="Pesados - Consorcio Porto Sião">
+                                <div class="work__title">Pesados Porto Sião</div>
+                            </a>
+                            <a href="https://imobiliario.portosiao.com.br/" class="work__img" target="_blank">
+                                <img src="assets/img/Imoveis.png" alt="Imóveis - Consorcio Porto Sião">
+                                <div class="work__title">Imóveis Porto Sião</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-dots">
+                <button role="button" class="dot " data-bs-target="#carouselExample" data-bs-slide-to="0"></button>
+            </div>
         </section>
 
         <!--===== CONTACT =====-->

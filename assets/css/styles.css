@@ -289,24 +289,24 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   width: 350px;
   height: 450px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .work__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: opacity 0.3s ease-in-out;
+  object-fit: contain;     /* Cobre o card inteiro, cortando as bordas se necessário */
+  object-position: center; /* Garante que o centro da imagem fique visível */
+  border-radius: 0;      /* Remove o arredondamento da imagem */
 }
+
+
 
 .work__img:hover {
   transform: translateY(-5px);
