@@ -13,7 +13,7 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 - **HTML5**: Estruturação semântica do conteúdo.
 - **CSS3**: Estilização com foco em responsividade e animações suaves.
 - **JavaScript**: Interatividade e funcionalidades dinâmicas.
-
+- **Vue.JS**: Framework progressivo para construção de componentes reativos e interativos na interface. 
 ---
 
 ## ✨ Funcionalidades
