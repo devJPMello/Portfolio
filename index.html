@@ -27,11 +27,10 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link text-decoration-none">Início</a>
-                    </li>
+                    <li class="nav__item"><a href="#home" class="nav__link active-link text-decoration-none">Início</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link text-decoration-none">Sobre</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link text-decoration-none">Projetos</a></li>
-                    <li class="nav__item"><a href="#contributions" class="nav__link text-decoration-none">Contribuições </a></li>
+                    <li class="nav__item"><a href="#contributions" class="nav__link text-decoration-none">Contribuições</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link text-decoration-none">Contato</a></li>
                 </ul>
             </div>
@@ -96,76 +95,125 @@
                 <div class="about__img">
                     <img src="assets/img/sobre.png" alt="">
                 </div>
-                <div>
+                <!-- Substitua o conteúdo da div onde está o texto "Sobre mim" -->
+                <div id="about-app">
                     <h4 class="about__subtitle"><br>Olá, </h4>
-                    <p class="about__text">Sou um entusiasta da tecnologia e um desenvolvedor apaixonado por transformar
-                        ideias em soluções funcionais e eficientes. Com experiência em TypeScript, React.js, React
-                        Native e Next.js, estou sempre em busca de aprimorar minhas habilidades e explorar novas
-                        tecnologias. Meu objetivo é criar aplicações inovadoras que gerem impacto, proporcionando
-                        experiências dinâmicas, escaláveis e acessíveis para facilitar a vida das pessoas. </p>
+                    <p class="about__text">{{ descricao }}</p>
                 </div>
-            </div>
+
+                <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+                <script>
+                    const { createApp } = Vue;
+
+                    createApp({
+                        data() {
+                            return {
+                                descricao: `Sou um entusiasta da tecnologia e um desenvolvedor apaixonado por transformar
+        ideias em soluções funcionais e eficientes. Com experiência em TypeScript, React.js, React
+        Native e Next.js, estou sempre em busca de aprimorar minhas habilidades e explorar novas
+        tecnologias. Meu objetivo é criar aplicações inovadoras que gerem impacto, proporcionando
+        experiências dinâmicas, escaláveis e acessíveis para facilitar a vida das pessoas.`
+                            }
+                        }
+                    }).mount('#about-app');
+                </script>
+
         </section>
+
 
         <!--===== WORK =====-->
         <section class="work section container" id="work">
             <h2 class="section-title">Projetos</h2>
             <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <!-- Primeira Página do Carrossel -->
+
+                    <!-- Página 1 -->
                     <div class="carousel-item active">
                         <div class="work__carousel">
-                            <a href="https://app-pomodoro-jp.vercel.app/" class="work__img" target="_blank">
-                                <img src="assets/img/AppPomodoro.png" alt="Tela do App Pomodoro">
-                                <div class="work__title">App Pomodoro</div>
-                            </a>
-                            <a href="https://sabor-express-dev.vercel.app/" class="work__img" target="_blank">
-                                <img src="assets/img/SaborExpress.png" alt="Sabor Express - Aplicativo de comida">
-                                <div class="work__title">Sabor Express</div>
-                            </a>
-                            <a href="https://gerador-senhas-alpha.vercel.app/" class="work__img" target="_blank">
-                                <img src="assets/img/GeradorSenhas.png" alt="Gerador de senhas - App para gerar senhas aleatorias">
-                                <div class="work__title">Gerador de senhas</div>
-                            </a>
+                            <div class="work__item">
+                                <a href="https://git-hub-profile-pink.vercel.app/" target="_blank">
+                                    <img src="assets/img/BlogGit.png" alt="GitHub Profile">
+                                </a>
+                                <h3 class="work__title">GitHub Profile</h3>
+                                <p class="work__desc">Busque perfis do GitHub com detalhes e repositórios.</p>
+                            </div>
+                            <div class="work__item">
+                                <a href="https://app-sorteio-ten.vercel.app/" target="_blank">
+                                    <img src="assets/img/AppSorteio.png" alt="Sabor Express">
+                                </a>
+                                <h3 class="work__title">App de Sorteio</h3>
+                                <p class="work__desc">Um aplicativo interativo para realizar sorteios de números ou
+                                    nomes.</p>
+                            </div>
+
+                            <div class="work__item">
+                                <a href="https://gerador-senhas-alpha.vercel.app/" target="_blank">
+                                    <img src="assets/img/GeradorSenhas.png" alt="Gerador de senhas">
+                                </a>
+                                <h3 class="work__title">Gerador de Senhas</h3>
+                                <p class="work__desc">Gere senhas seguras com filtros personalizados para cadastros.</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Segunda Página do Carrossel -->
-                    <div class="carousel-item ">
-                        <div class="work__carousel ">
-                            <a href="https://sistema-controle-financeiro-three.vercel.app/" class="work__img"
-                                target="_blank">
-                                <img src="assets/img/Controle-Financeiro.png" alt="EasyCar - Aplicativo de Transporte">
-                                <div class="work__title">Controle Financeiro</div>
-                            </a>
-                            <a href="https://lista-de-tarefas-dev.vercel.app/" class="work__img" target="_blank">
-                                <img src="assets/img/ListadeTarefa.png" alt="Interface da Lista de Tarefas">
-                                <div class="work__title">Lista de Tarefas</div>
-                            </a>
-                            <a href="https://pokemons-pkdx.vercel.app/" class="work__img" target="_blank">
-                                <img src="assets/img/Pokemon.png" alt="Pokedex - Catálogo de Pokémon">
-                                <div class="work__title">Pokedex</div>
-                            </a>
+                    <!-- Página 2 -->
+                    <div class="carousel-item">
+                        <div class="work__carousel">
+                            <div class="work__item">
+                                <a href="https://fsw-donalds-app.vercel.app/fsw-donalds" target="_blank">
+                                    <img src="assets/img/FSWDonald.png" alt="FSWDonalds">
+                                </a>
+                                <h3 class="work__title">FSWDonalds</h3>
+                                <p class="work__desc">Protótipo de fast food digital com menu e carrinho.</p>
+                            </div>
+                            <div class="work__item">
+                                <a href="https://sistema-controle-financeiro-three.vercel.app/" target="_blank">
+                                    <img src="assets/img/Controle-Financeiro.png" alt="Controle Financeiro">
+                                </a>
+                                <h3 class="work__title">Controle Financeiro</h3>
+                                <p class="work__desc">Gerencie receitas, despesas e saldos com gráficos.</p>
+                            </div>
+
+                            <div class="work__item">
+                                <a href="https://lista-de-tarefas-dev.vercel.app/" target="_blank">
+                                    <img src="assets/img/ListadeTarefa.png" alt="Lista de Tarefas">
+                                </a>
+                                <h3 class="work__title">Lista de Tarefas</h3>
+                                <p class="work__desc">Organize seu dia com tarefas dinâmicas e status.</p>
+                            </div>
+
+
                         </div>
                     </div>
-                    <!-- Terceira Página do Carrossel -->
-                    <div class="carousel-item ">
-                        <div class="work__carousel ">
-                            <a href="https://fsw-donalds-app.vercel.app/fsw-donalds" class="work__img" target="_blank">
-                                <img src="assets/img/FSWDonald.png" alt="FSWDonalds - Fast Food Digital">
-                                <div class="work__title">FSWDonalds</div>
-                            </a>
-                            <a href="https://controle-de-estoque-react.vercel.app/" class="work__img" target="_blank ">
-                                <img src="assets/img/Estoque.png" alt="BananaStock - APP de controle de estoque">
-                                <div class="work__title">BananaStock</div>
-                            </a>
-                            <a href="https://git-hub-profile-pink.vercel.app/" class="work__img" target="_blank">
-                                <img src="assets/img/BlogGit.png"
-                                    alt="GitHub Profile - App para busca de usuários">
-                                <div class="work__title">GitHub Profile</div>
-                            </a>
+
+                    <!-- Página 3 -->
+                    <div class="carousel-item">
+                        <div class="work__carousel">
+                            <div class="work__item">
+                                <a href="https://sabor-express-dev.vercel.app/" target="_blank">
+                                    <img src="assets/img/SaborExpress.png" alt="Sabor Express">
+                                </a>
+                                <h3 class="work__title">Sabor Express</h3>
+                                <p class="work__desc">App de delivery com foco em UX e performance.</p>
+                            </div>
+                            <div class="work__item">
+                                <a href="https://controle-de-estoque-react.vercel.app/" target="_blank">
+                                    <img src="assets/img/Estoque.png" alt="Controle de Estoque">
+                                </a>
+                                <h3 class="work__title">BananaStock</h3>
+                                <p class="work__desc">Sistema simples de controle de estoque por produto.</p>
+                            </div>
+                            <div class="work__item">
+                                <a href="https://app-pomodoro-jp.vercel.app/" target="_blank">
+                                    <img src="assets/img/AppPomodoro.png" alt="App Pomodoro">
+                                </a>
+                                <h3 class="work__title">App Pomodoro</h3>
+                                <p class="work__desc">Aplicativo de produtividade baseado na técnica Pomodoro.</p>
+                            </div>
+
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -235,21 +283,34 @@
             <h2 class="section-title">Contribuições</h2>
             <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <!-- Primeira Página do Carrossel -->
                     <div class="carousel-item active">
                         <div class="work__carousel">
-                            <a href="https://auto.portosiao.com.br/" class="work__img" target="_blank">
-                                <img src="assets/img/Automoveis.png" alt="Automóveis - Consorcio Porto Sião">
-                                <div class="work__title">Automóveis Porto Sião</div>
-                            </a>
-                            <a href="https://pesados.portosiao.com.br/" class="work__img" target="_blank">
-                                <img src="assets/img/Pesados.png" alt="Pesados - Consorcio Porto Sião">
-                                <div class="work__title">Pesados Porto Sião</div>
-                            </a>
-                            <a href="https://imobiliario.portosiao.com.br/" class="work__img" target="_blank">
-                                <img src="assets/img/Imoveis.png" alt="Imóveis - Consorcio Porto Sião">
-                                <div class="work__title">Imóveis Porto Sião</div>
-                            </a>
+                            <div class="work__item">
+                                <a href="https://auto.portosiao.com.br/" target="_blank">
+                                    <img src="assets/img/Automoveis.png" alt="Automóveis - Consorcio Porto Sião">
+                                </a>
+                                <h3 class="work__title">Automóveis Porto Sião</h3>
+                                <p class="work__desc">Portal de consórcio de automóveis, com vitrine e simulações
+                                    personalizadas.</p>
+                            </div>
+
+                            <div class="work__item">
+                                <a href="https://pesados.portosiao.com.br/" target="_blank">
+                                    <img src="assets/img/Pesados.png" alt="Pesados - Consorcio Porto Sião">
+                                </a>
+                                <h3 class="work__title">Pesados Porto Sião</h3>
+                                <p class="work__desc">Sistema voltado para consórcios de caminhões e veículos
+                                    pesados.</p>
+                            </div>
+
+                            <div class="work__item">
+                                <a href="https://imobiliario.portosiao.com.br/" target="_blank">
+                                    <img src="assets/img/Imoveis.png" alt="Imóveis - Consorcio Porto Sião">
+                                </a>
+                                <h3 class="work__title">Imóveis Porto Sião</h3>
+                                <p class="work__desc">Aplicação imobiliária com planos de consórcio e cadastro de
+                                    imóveis.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -264,41 +325,34 @@
         <section class="contact section" id="contact">
             <h2 class="section-title">Contato</h2>
 
-            <div class="contact__container bd-grid">
-                <form onsubmit="sendToWhatsApp(event)" class="contact__form">
-                    <input type="text" id="name" placeholder="Nome" class="contact__input" required>
-                    <input type="email" id="email" placeholder="Email" class="contact__input" required>
-                    <textarea id="message" placeholder="Sua mensagem..." cols="30" rows="10" class="contact__input"
-                        required></textarea>
-
+            <div id="contact-form">
+                <form @submit.prevent="enviarMensagem" class="contact__form">
+                    <input v-model="nome" type="text" placeholder="Nome" class="contact__input" required>
+                    <input v-model="email" type="email" placeholder="Email" class="contact__input" required>
+                    <textarea v-model="mensagem" placeholder="Sua mensagem..." class="contact__input" required></textarea>
                     <button type="submit" class="contact__button button">Enviar via WhatsApp</button>
                 </form>
             </div>
+
+            <script>
+                createApp({
+                    data() {
+                        return {
+                            nome: '',
+                            email: '',
+                            mensagem: ''
+                        }
+                    },
+                    methods: {
+                        enviarMensagem() {
+                            const texto = `*Nome:* ${this.nome}\n*Email:* ${this.email}\n\n*Mensagem:*\n${this.mensagem}`;
+                            const url = `https://wa.me/5566984239133?text=${encodeURIComponent(texto)}`;
+                            window.open(url, '_blank');
+                        }
+                    }
+                }).mount('#contact-form');
+            </script>
         </section>
-
-        <script>
-            function sendToWhatsApp(event) {
-                event.preventDefault(); // Impede o envio tradicional do formulário
-
-                let phoneNumber = "5566984239133"; // Substitua pelo seu número
-                let name = document.getElementById("name").value.trim();
-                let email = document.getElementById("email").value.trim();
-                let message = document.getElementById("message").value.trim();
-
-                // Criando a mensagem formatada
-                let whatsappMessage =
-                    ` *Nome:* ${name}\n` +
-                    `*Email:* ${email}\n\n` +
-                    `*Mensagem:*\n${message}\n\n`
-
-
-                // Criando o link para o WhatsApp
-                let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-
-                // Redirecionando para o WhatsApp
-                window.open(url, "_blank");
-            }
-        </script>
 
     </main>
 
@@ -339,6 +393,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+    <!-- Vue.js CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+
 </body>
 
 </html>
